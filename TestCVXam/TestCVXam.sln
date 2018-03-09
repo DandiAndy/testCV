@@ -7,14 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCVXam.Android", "TestCV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCVXam.UWP", "TestCVXam\TestCVXam.UWP\TestCVXam.UWP.csproj", "{B87263A0-74FE-4A99-8115-C6F8CAD2376C}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TestCVXam", "TestCVXam\TestCVXam\TestCVXam.shproj", "{DDE0B076-723F-4993-B89C-D42B6391A4AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextCVXam.CogServices", "TextCVXam.CogServices\TextCVXam.CogServices.csproj", "{884EF634-BD50-4AD2-989B-94A6EA93C4D3}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		TestCVXam\TestCVXam\TestCVXam.projitems*{b87263a0-74fe-4a99-8115-c6f8cad2376c}*SharedItemsImports = 4
-		TestCVXam\TestCVXam\TestCVXam.projitems*{d896a6a4-2255-492a-92fc-26d63b1b1042}*SharedItemsImports = 4
-		TestCVXam\TestCVXam\TestCVXam.projitems*{dde0b076-723f-4993-b89c-d42b6391a4af}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -70,6 +65,22 @@ Global
 		{B87263A0-74FE-4A99-8115-C6F8CAD2376C}.Release|x86.ActiveCfg = Release|x86
 		{B87263A0-74FE-4A99-8115-C6F8CAD2376C}.Release|x86.Build.0 = Release|x86
 		{B87263A0-74FE-4A99-8115-C6F8CAD2376C}.Release|x86.Deploy.0 = Release|x86
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Debug|ARM.Build.0 = Debug|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Debug|x64.Build.0 = Debug|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Debug|x86.Build.0 = Debug|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Release|ARM.ActiveCfg = Release|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Release|ARM.Build.0 = Release|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Release|x64.ActiveCfg = Release|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Release|x64.Build.0 = Release|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{884EF634-BD50-4AD2-989B-94A6EA93C4D3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
