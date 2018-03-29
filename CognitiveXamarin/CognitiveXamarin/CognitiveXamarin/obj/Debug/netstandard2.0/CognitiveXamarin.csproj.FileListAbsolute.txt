@@ -1,0 +1,12 @@
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.csproj.CoreCompileInputs.cache
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.App.xaml.g.cs
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.MainPage.xaml.g.cs
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.SummaryPage.xaml.g.cs
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.AssemblyInfoInputs.cache
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.AssemblyInfo.cs
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\bin\Debug\netstandard2.0\CognitiveXamarin.deps.json
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\bin\Debug\netstandard2.0\CognitiveXamarin.dll
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\bin\Debug\netstandard2.0\CognitiveXamarin.pdb
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.dll
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.pdb
+C:\Users\Andrew.Kenny\Desktop\Research\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin\obj\Debug\netstandard2.0\CognitiveXamarin.csprojResolveAssemblyReference.cache

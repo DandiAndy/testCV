@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CognitiveXamarin.SummaryPage"
+             Padding="10"
+             Title="Summary Page">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image BackgroundColor="DimGray" Grid.Row="0" Grid.Column="0"></Image>
+
+        <ListView Grid.Row="1" Grid.Column="0" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="Add title binding here" Detail="Add detail binding here"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Slider Value="50"
+                Grid.Row="2" Grid.Column="0"></Slider>
+
+        <Button Text="Send" TextColor="AntiqueWhite" FontSize="16" 
+                BackgroundColor="CornflowerBlue" Grid.Row="3" Grid.Column="0"></Button>
+    </Grid>
+
+
+</ContentPage>
