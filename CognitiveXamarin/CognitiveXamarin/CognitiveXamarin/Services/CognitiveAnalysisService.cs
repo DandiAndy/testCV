@@ -17,7 +17,7 @@ namespace CognitiveXamarin.Services
         // **********************************************
 
         // Replace the subscriptionKey string value with your valid subscription key.
-        private const string subscriptionKey = "83ad0056ce8441e681f07f222a83c237";
+        private const string subscriptionKey = "8612a8af-313d-4b69-a38b-eec74e79ca79";
 
         // Replace or verify the region.
         //

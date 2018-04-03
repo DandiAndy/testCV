@@ -171,7 +171,6 @@ C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\System.Xml.Linq.pdb
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\System.Xml.pdb
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\bin\Debug\CognitiveXamarin.Android.dll
-C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\linksrc\CognitiveXamarin.pdb
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\linksrc\CognitiveXamarin.Android.dll.mdb
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\linksrc\Plugin.Media.dll.mdb
