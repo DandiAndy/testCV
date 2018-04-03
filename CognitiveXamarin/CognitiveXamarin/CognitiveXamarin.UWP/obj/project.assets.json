@@ -234,6 +234,17 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Plugin.Permissions/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -253,6 +264,20 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Xam.Plugin.Media/3.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "2.2.1"
+        },
+        "compile": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
         }
       },
       "Xamarin.Forms/2.5.0.280555": {
@@ -278,6 +303,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Media": "3.1.3",
           "Xamarin.Forms": "2.5.0.280555"
         },
         "compile": {
@@ -522,6 +548,17 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Plugin.Permissions/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -716,6 +753,20 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Xam.Plugin.Media/3.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "2.2.1"
+        },
+        "compile": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
@@ -739,6 +790,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Media": "3.1.3",
           "Xamarin.Forms": "2.5.0.280555"
         },
         "compile": {
@@ -983,6 +1035,17 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Plugin.Permissions/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
         "type": "package",
         "compile": {
@@ -1178,6 +1241,20 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Xam.Plugin.Media/3.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "2.2.1"
+        },
+        "compile": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
@@ -1201,6 +1278,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Media": "3.1.3",
           "Xamarin.Forms": "2.5.0.280555"
         },
         "compile": {
@@ -1445,6 +1523,17 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Plugin.Permissions/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -1639,6 +1728,20 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Xam.Plugin.Media/3.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "2.2.1"
+        },
+        "compile": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
@@ -1662,6 +1765,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Media": "3.1.3",
           "Xamarin.Forms": "2.5.0.280555"
         },
         "compile": {
@@ -1906,6 +2010,17 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Plugin.Permissions/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -2101,6 +2216,20 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Xam.Plugin.Media/3.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "2.2.1"
+        },
+        "compile": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
@@ -2124,6 +2253,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Media": "3.1.3",
           "Xamarin.Forms": "2.5.0.280555"
         },
         "compile": {
@@ -2368,6 +2498,17 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Plugin.Permissions/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -2562,6 +2703,20 @@
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
+      "Xam.Plugin.Media/3.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "2.2.1"
+        },
+        "compile": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
@@ -2585,6 +2740,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Media": "3.1.3",
           "Xamarin.Forms": "2.5.0.280555"
         },
         "compile": {
@@ -2829,6 +2985,17 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Plugin.Permissions/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -3024,6 +3191,20 @@
           "build/_._": {}
         }
       },
+      "Xam.Plugin.Media/3.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "2.2.1"
+        },
+        "compile": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Media.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Media.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.280555": {
         "type": "package",
         "compile": {
@@ -3047,6 +3228,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Media": "3.1.3",
           "Xamarin.Forms": "2.5.0.280555"
         },
         "compile": {
@@ -5448,6 +5630,41 @@
         "lib/netstandard1.0/_._"
       ]
     },
+    "Plugin.Permissions/2.2.1": {
+      "sha512": "ixEdsOBokh6eIofokJmru0u18hZKUODkvJZeest0CsHiiuRcO38yiTr+2Nq6Pg9hm0fhyavFQydhbldfHOp44Q==",
+      "type": "package",
+      "path": "plugin.permissions/2.2.1",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Permissions.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Permissions.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Permissions.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Permissions.XML",
+        "lib/MonoAndroid10/Plugin.Permissions.dll",
+        "lib/MonoAndroid10/Plugin.Permissions.pdb",
+        "lib/UAP10/Plugin.Permissions.Abstractions.dll",
+        "lib/UAP10/Plugin.Permissions.Abstractions.pdb",
+        "lib/UAP10/Plugin.Permissions.Abstractions.xml",
+        "lib/UAP10/Plugin.Permissions.XML",
+        "lib/UAP10/Plugin.Permissions.dll",
+        "lib/UAP10/Plugin.Permissions.pdb",
+        "lib/UAP10/Plugin.Permissions.pri",
+        "lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Permissions.XML",
+        "lib/Xamarin.iOS10/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Permissions.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Permissions.deps.json",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.pdb",
+        "lib/netstandard1.0/Plugin.Permissions.xml",
+        "plugin.permissions.2.2.1.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
+      ]
+    },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
       "sha512": "ZGShwJB9yNwHyM+w7g8int9gmurykzvy+SWv74+lCul0ddTmtI9WhXrAg3Dyub9urV7/lUtUjCjH+cSC5/5t7A==",
       "type": "package",
@@ -6555,6 +6772,47 @@
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
+    "Xam.Plugin.Media/3.1.3": {
+      "sha512": "SI6m6PKeOZSksNp1j5fnl1ePeuLKQWMOkqy56YhCPtspfyA7N2k4lFi+2iU3TJ2YUfjWpIybTQ/1hdLKGTY6Jw==",
+      "type": "package",
+      "path": "xam.plugin.media/3.1.3",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Media.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Media.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Media.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Media.dll",
+        "lib/MonoAndroid10/Plugin.Media.pdb",
+        "lib/MonoAndroid10/Plugin.Media.xml",
+        "lib/UAP10/Plugin.Media.Abstractions.dll",
+        "lib/UAP10/Plugin.Media.Abstractions.pdb",
+        "lib/UAP10/Plugin.Media.Abstractions.xml",
+        "lib/UAP10/Plugin.Media.XML",
+        "lib/UAP10/Plugin.Media.dll",
+        "lib/UAP10/Plugin.Media.pdb",
+        "lib/UAP10/Plugin.Media.pri",
+        "lib/Xamarin.iOS10/Plugin.Media.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Media.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Media.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Media.dll",
+        "lib/Xamarin.iOS10/Plugin.Media.xml",
+        "lib/netstandard1.0/Plugin.Media.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Media.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Media.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Media.deps.json",
+        "lib/netstandard1.0/Plugin.Media.dll",
+        "lib/netstandard1.0/Plugin.Media.pdb",
+        "lib/netstandard1.0/Plugin.Media.xml",
+        "lib/tizen40/Plugin.Media.Abstractions.dll",
+        "lib/tizen40/Plugin.Media.Abstractions.pdb",
+        "lib/tizen40/Plugin.Media.Abstractions.xml",
+        "lib/tizen40/Plugin.Media.deps.json",
+        "lib/tizen40/Plugin.Media.dll",
+        "lib/tizen40/Plugin.Media.pdb",
+        "readme.txt",
+        "xam.plugin.media.3.1.3.nupkg.sha512",
+        "xam.plugin.media.nuspec"
+      ]
+    },
     "Xamarin.Forms/2.5.0.280555": {
       "sha512": "JVmozDJQNKEVhN4NG5EiG2IBua0+xK9b+t1L/VUN9HeIXkc8BubZM6UnnE1CftlGt0U2+JGTQSL79uxpx0KCpQ==",
       "type": "package",
@@ -6762,11 +7020,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.UWP\\CognitiveXamarin.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\testCV\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.UWP\\CognitiveXamarin.UWP.csproj",
       "projectName": "CognitiveXamarin.UWP",
-      "projectPath": "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.UWP\\CognitiveXamarin.UWP.csproj",
+      "projectPath": "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\testCV\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.UWP\\CognitiveXamarin.UWP.csproj",
       "packagesPath": "C:\\Users\\Andrew.Kenny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.UWP\\obj\\",
+      "outputPath": "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\testCV\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -6788,8 +7046,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.csproj": {
-              "projectPath": "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.csproj"
+            "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\testCV\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.csproj": {
+              "projectPath": "C:\\Users\\Andrew.Kenny\\Desktop\\Research\\testCV\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin\\CognitiveXamarin.csproj"
             }
           }
         }

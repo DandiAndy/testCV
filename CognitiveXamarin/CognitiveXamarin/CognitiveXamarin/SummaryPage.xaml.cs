@@ -12,9 +12,11 @@ namespace CognitiveXamarin
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SummaryPage: ContentPage
 	{
-		public SummaryPage()
+		public SummaryPage(ImageSource img)
 		{
             InitializeComponent();
+
+		    SelectedImage.Source = img;
 		}
 	}
 }

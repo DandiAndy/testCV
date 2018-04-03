@@ -19,20 +19,19 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Text="Camera" TextColor="AntiqueWhite" FontSize="16" 
+        <Button x:Name="CameraButton" Text="Camera" TextColor="AntiqueWhite" FontSize="16" 
                 BackgroundColor="CornflowerBlue" Grid.Row="0" Grid.Column="0"></Button>
-        <Button Text="Files" TextColor="AntiqueWhite" FontSize="16" 
+        <Button x:Name="FileButton" Text="Files" TextColor="AntiqueWhite" FontSize="16" 
                 BackgroundColor="CornflowerBlue" Grid.Row="0" Grid.Column="1"></Button>
 
         <Label Text="Selected Image:" FontSize="28"  TextColor="Black" 
                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
                VerticalTextAlignment="End" HorizontalTextAlignment="Start"></Label>
 
-        <Image BackgroundColor="DimGray" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></Image>
+        <Image x:Name="SelectedImage" BackgroundColor="DimGray" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></Image>
 
-        <Button Text="Send" TextColor="AntiqueWhite" FontSize="16" 
-                BackgroundColor="CornflowerBlue" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
-                Clicked="Analysis_OnClicked"></Button>
+        <Button x:Name="AnalysisButton" Text="Send" TextColor="AntiqueWhite" FontSize="16" 
+                BackgroundColor="CornflowerBlue" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"></Button>
     </Grid>
 
 </ContentPage>

@@ -2,6 +2,10 @@ CognitiveXamarin.Droid.MainActivity, CognitiveXamarin.Android;md50bc902a887bc88e
 CognitiveXamarin.Droid.MainActivity, CognitiveXamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc902a887bc88ec0d3dc64e8d1f7ee1.MainActivity
 CognitiveXamarin.Droid.MainActivity;md50bc902a887bc88ec0d3dc64e8d1f7ee1.MainActivity
 cognitivexamarin.droid.MainActivity;md50bc902a887bc88ec0d3dc64e8d1f7ee1.MainActivity
+Plugin.Media.MediaPickerActivity, Plugin.Media;md5dff1bed22da39876f271fd39214b8f60.MediaPickerActivity
+Plugin.Media.MediaPickerActivity, Plugin.Media, Version=3.1.3.0, Culture=neutral, PublicKeyToken=null;md5dff1bed22da39876f271fd39214b8f60.MediaPickerActivity
+Plugin.Media.MediaPickerActivity;md5dff1bed22da39876f271fd39214b8f60.MediaPickerActivity
+plugin.media.MediaPickerActivity;md5dff1bed22da39876f271fd39214b8f60.MediaPickerActivity
 Android.Support.V4.Widget.SearchViewCompat/IOnCloseListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat.IOnCloseListenerImplementor;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor

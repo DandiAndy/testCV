@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 
 namespace CognitiveXamarin.Droid
 {
@@ -14,6 +16,9 @@ namespace CognitiveXamarin.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            //for camera
+            Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -22,6 +27,7 @@ namespace CognitiveXamarin.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
+
     }
 }
 

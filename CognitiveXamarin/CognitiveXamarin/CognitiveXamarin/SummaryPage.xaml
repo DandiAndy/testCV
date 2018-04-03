@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image BackgroundColor="DimGray" Grid.Row="0" Grid.Column="0"></Image>
+        <Image x:Name="SelectedImage" BackgroundColor="DimGray" Grid.Row="0" Grid.Column="0"></Image>
 
         <ListView Grid.Row="1" Grid.Column="0" >
             <ListView.ItemTemplate>

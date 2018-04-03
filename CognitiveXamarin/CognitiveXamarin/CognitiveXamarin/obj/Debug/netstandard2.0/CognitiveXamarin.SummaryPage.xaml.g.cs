@@ -11,13 +11,17 @@
 namespace CognitiveXamarin {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Andrew.Kenny\\Desktop\\Research\\CognitiveXamarin\\CognitiveXamarin\\Cognitiv" +
-        "eXamarin\\SummaryPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Andrew.Kenny\\Desktop\\Research\\testCV\\CognitiveXamarin\\CognitiveXamarin\\C" +
+        "ognitiveXamarin\\SummaryPage.xaml")]
     public partial class SummaryPage : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Image SelectedImage;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SummaryPage));
+            SelectedImage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "SelectedImage");
         }
     }
 }
