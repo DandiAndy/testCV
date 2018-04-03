@@ -4,7 +4,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
 using CognitiveXamarin.Tools;
+using Xamarin.Forms;
 
 namespace CognitiveXamarin.Services
 {
@@ -15,7 +17,7 @@ namespace CognitiveXamarin.Services
         // **********************************************
 
         // Replace the subscriptionKey string value with your valid subscription key.
-        private const string subscriptionKey = "13hc77781f7e4b19b5fcdd72a8df7156";
+        private const string subscriptionKey = "83ad0056ce8441e681f07f222a83c237";
 
         // Replace or verify the region.
         //
@@ -28,26 +30,18 @@ namespace CognitiveXamarin.Services
         private const string uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
 
 
-        public static void CognitiveRequest()
+        public static async Task<string> CognitiveRequest(string filepath)
         {
-            // Get the path and filename to process from the user.
-            Console.WriteLine("Analyze an image:");
-            Console.Write("Enter the path to an image you wish to analzye: ");
-            var imageFilePath = Console.ReadLine();
-
             // Execute the REST API call.
-            MakeAnalysisRequest(imageFilePath);
-
-            Console.WriteLine("\nPlease wait a moment for the results to appear. Then, press Enter to exit...\n");
-            Console.ReadLine();
+            return await MakeAnalysisRequest(filepath);          
         }
 
 
         /// <summary>
         ///     Gets the analysis of the specified image file by using the Computer Vision REST API.
         /// </summary>
-        /// <param name="imageFilePath">The image file.</param>
-        private static async void MakeAnalysisRequest(string imageFilePath)
+        /// <param name="filepath">The image file.</param>
+        private static async Task<string> MakeAnalysisRequest(string filepath)
         {
             var client = new HttpClient();
 
@@ -63,7 +57,9 @@ namespace CognitiveXamarin.Services
             HttpResponseMessage response;
 
             // Request body. Posts a locally stored JPEG image.
-            var byteData = GetImageAsByteArray(imageFilePath);
+            var byteData = GetImageAsByteArray(filepath);
+
+            
 
             using (var content = new ByteArrayContent(byteData))
             {
@@ -75,11 +71,7 @@ namespace CognitiveXamarin.Services
                 response = await client.PostAsync(uri, content);
 
                 // Get the JSON response.
-                var contentString = await response.Content.ReadAsStringAsync();
-
-                // Display the JSON response.
-                Console.WriteLine("\nResponse:\n");
-                Console.WriteLine(JsonPrettyPrint(contentString));
+                return await response.Content.ReadAsStringAsync();
             }
         }
 

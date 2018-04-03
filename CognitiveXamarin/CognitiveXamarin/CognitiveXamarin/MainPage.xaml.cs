@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CognitiveXamarin.Services;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using Xamarin.Forms;
@@ -11,7 +12,7 @@ namespace CognitiveXamarin
 {
 	public partial class MainPage : ContentPage
 	{
-
+	    private string currentImgPath;
         public MainPage()
 		{
 			InitializeComponent();
@@ -43,7 +44,7 @@ namespace CognitiveXamarin
 	        if (file == null)
 	            return;
 
-	        await DisplayAlert("File Location", file.Path, "OK");
+	        currentImgPath = file.Path;
       
 	        SelectedImage.Source = ImageSource.FromStream(() => file.GetStream());
         }
@@ -65,20 +66,28 @@ namespace CognitiveXamarin
 	            CompressionQuality = 92
             });
 
+	        
 	        if (file == null)
 	            return;
 
-	        SelectedImage.Source = ImageSource.FromStream(() => file.GetStream());
+	        currentImgPath = file.Path;
+
+            SelectedImage.Source = ImageSource.FromStream(() => file.GetStream());
         }
 
 	    private async void AnalysisButton_OnClicked(object sender, EventArgs e)
 	    {
-	        if (SelectedImage.Source == null)
+	        if (currentImgPath == null)
 	        {
 	            await DisplayAlert("Please Select an Image:", "No image Selected", "OK");
 	            return;
 	        }
-	        await Navigation.PushAsync(new SummaryPage(SelectedImage.Source));
+
+            var results = await CognitiveAnalysisService.CognitiveRequest(currentImgPath);
+
+            if(!string.IsNullOrEmpty(results)) { 
+	            await Navigation.PushAsync(new SummaryPage(SelectedImage.Source, results));
+            }
         }
     }
 }

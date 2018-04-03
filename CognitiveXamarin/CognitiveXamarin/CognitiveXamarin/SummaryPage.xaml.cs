@@ -12,11 +12,26 @@ namespace CognitiveXamarin
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SummaryPage: ContentPage
 	{
-		public SummaryPage(ImageSource img)
+
+	    private string analysisResults;
+
+        public SummaryPage(ImageSource img, string analysisResults)
 		{
             InitializeComponent();
 
 		    SelectedImage.Source = img;
+
+		    this.analysisResults = analysisResults;
 		}
+
+	    protected override void OnAppearing()
+	    {
+            ResultPrompt();
+	    }
+
+	    public async void ResultPrompt()
+	    {
+	        await DisplayAlert("Results", analysisResults, "Ok");
+	    }
 	}
 }
