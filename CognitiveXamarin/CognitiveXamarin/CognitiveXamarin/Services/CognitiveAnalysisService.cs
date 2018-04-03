@@ -17,7 +17,7 @@ namespace CognitiveXamarin.Services
         // **********************************************
 
         // Replace the subscriptionKey string value with your valid subscription key.
-        private const string subscriptionKey = "8612a8af-313d-4b69-a38b-eec74e79ca79";
+        private const string subscriptionKey = "f6e0a84098fa40f6a48abaf62998dbf7";
 
         // Replace or verify the region.
         //
@@ -27,7 +27,7 @@ namespace CognitiveXamarin.Services
         //
         // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
         // a free trial subscription key, you should not need to change this region.
-        private const string uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
+        private const string uriBase = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.1/Prediction/768ccd4a-c898-4e0d-9864-0899df095b28/image?iterationId=00cf512e-eefb-482c-a520-835c132f8d21";
 
 
         public static async Task<string> CognitiveRequest(string filepath)
@@ -46,13 +46,13 @@ namespace CognitiveXamarin.Services
             var client = new HttpClient();
 
             // Request headers.
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
+            client.DefaultRequestHeaders.Add("Prediction-Key", subscriptionKey);
 
             // Request parameters. A third optional parameter is "details".
-            var requestParameters = "visualFeatures=Categories,Description,Color&language=en";
+            //var requestParameters = "visualFeatures=Categories,Description,Color&language=en";
 
             // Assemble the URI for the REST API Call.
-            var uri = uriBase + "?" + requestParameters;
+            var uri = uriBase;
 
             HttpResponseMessage response;
 
