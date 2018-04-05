@@ -86,7 +86,7 @@ namespace CognitiveXamarin
             var results = await CognitiveAnalysisService.CognitiveRequest(currentImgPath);
 
             if(!string.IsNullOrEmpty(results)) { 
-	            await Navigation.PushAsync(new SummaryPage(SelectedImage.Source, results));
+	            await Navigation.PushAsync(new SummaryPage(SelectedImage.Source, currentImgPath, results));
             }
         }
     }

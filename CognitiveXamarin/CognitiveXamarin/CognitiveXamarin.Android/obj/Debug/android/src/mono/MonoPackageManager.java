@@ -109,6 +109,7 @@ class MonoPackageManager_Resources {
 		"CognitiveXamarin.Android.dll",
 		"CognitiveXamarin.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Media.Abstractions.dll",
 		"Plugin.Media.dll",

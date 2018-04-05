@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
 using CognitiveXamarin.Tools;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace CognitiveXamarin.Services
 {
@@ -15,7 +19,7 @@ namespace CognitiveXamarin.Services
         // **********************************************
 
         // Replace the subscriptionKey string value with your valid subscription key.
-        private const string subscriptionKey = "13hc77781f7e4b19b5fcdd72a8df7156";
+        private const string subscriptionKey = "35f8e82d4b0144f3aabb53c3e6a0f05a";
 
         // Replace or verify the region.
         //
@@ -25,21 +29,36 @@ namespace CognitiveXamarin.Services
         //
         // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
         // a free trial subscription key, you should not need to change this region.
-        private const string uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
+        private const string uriBase = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.2/Training/projects/768ccd4a-c898-4e0d-9864-0899df095b28/images/files";
 
 
-        public static void CognitiveTraining()
+        public static async Task<string> CognitiveTraining(string filepath, List<string> tags)
         {
-            // Get the path and filename to process from the user.
-            Console.WriteLine("Analyze an image:");
-            Console.Write("Enter the path to an image you wish to analzye: ");
-            var imageFilePath = Console.ReadLine();
-
             // Execute the REST API call.
-            MakeAnalysisRequest(imageFilePath);
+            var request = CreateRequest(filepath, tags);
+            return await MakeTrainingRequest(request);
+        }
 
-            Console.WriteLine("\nPlease wait a moment for the results to appear. Then, press Enter to exit...\n");
-            Console.ReadLine();
+        private static string CreateRequest(string filepath, List<string> tags)
+        {
+            JObject jRequest = new JObject(
+                new JProperty("Image",
+                    new JArray(
+                        new JObject(
+                            new JProperty("Name", filepath),
+                            new JProperty("Contents", GetImageAsByteArray(filepath)),
+                            new JProperty("TagIds", "")
+                        )
+                    )
+                ),
+                new JProperty("TagIds",
+                    new JArray(
+                        from tag in tags
+                        select new JValue(tag)   
+                    )
+                )
+            );
+            return jRequest.ToString();
         }
 
 
@@ -47,39 +66,36 @@ namespace CognitiveXamarin.Services
         ///     Gets the analysis of the specified image file by using the Computer Vision REST API.
         /// </summary>
         /// <param name="imageFilePath">The image file.</param>
-        private static async void MakeAnalysisRequest(string imageFilePath)
+        private static async Task<string> MakeTrainingRequest(string request)
         {
             var client = new HttpClient();
 
             // Request headers.
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
+            client.DefaultRequestHeaders.Add("Training-Key", subscriptionKey);
 
             // Request parameters. A third optional parameter is "details".
-            var requestParameters = "visualFeatures=Categories,Description,Color&language=en";
+            //var requestParameters = "visualFeatures=Categories,Description,Color&language=en";
 
             // Assemble the URI for the REST API Call.
-            var uri = uriBase + "?" + requestParameters;
+            var uri = uriBase;
 
             HttpResponseMessage response;
 
             // Request body. Posts a locally stored JPEG image.
-            var byteData = GetImageAsByteArray(imageFilePath);
+            var byteData = Encoding.UTF8.GetBytes(request);
+
 
             using (var content = new ByteArrayContent(byteData))
             {
                 // This example uses content type "application/octet-stream".
                 // The other content types you can use are "application/json" and "multipart/form-data".
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
                 // Execute the REST API call.
                 response = await client.PostAsync(uri, content);
 
                 // Get the JSON response.
-                var contentString = await response.Content.ReadAsStringAsync();
-
-                // Display the JSON response.
-                Console.WriteLine("\nResponse:\n");
-                Console.WriteLine(JsonPrettyPrint(contentString));
+                return await response.Content.ReadAsStringAsync();
             }
         }
 
@@ -93,9 +109,8 @@ namespace CognitiveXamarin.Services
         {
             var fileStream = new FileStream(imageFilePath, FileMode.Open, FileAccess.Read);
             var binaryReader = new BinaryReader(fileStream);
-            return binaryReader.ReadBytes((int) fileStream.Length);
+            return binaryReader.ReadBytes((int)fileStream.Length);
         }
-
 
         /// <summary>
         ///     Formats the given JSON string by adding line breaks and indents.

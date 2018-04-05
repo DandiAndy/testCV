@@ -8,6 +8,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="4*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
@@ -15,23 +16,37 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image x:Name="SelectedImage" BackgroundColor="DimGray" Grid.Row="0" Grid.Column="0"></Image>
+        <Image x:Name="SelectedImage" BackgroundColor="DimGray"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" ></Image>
 
-        <ListView Grid.Row="1" Grid.Column="0" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="Add title binding here" Detail="Add detail binding here"></TextCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Label FontSize="24" FontAttributes="Bold" Text="Tag" HorizontalOptions="StartAndExpand"></Label>
+            <Label FontSize="24" FontAttributes="Bold" Text="Probability" HorizontalOptions="CenterAndExpand"></Label>
+            <Label FontSize="24" FontAttributes="Bold" Text="Select" HorizontalOptions="EndAndExpand"></Label>
+        </StackLayout>
 
-        <Slider Value="50"
-                Grid.Row="2" Grid.Column="0"></Slider>
+        <ScrollView x:Name="PredictionView" 
+                    Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <StackLayout x:Name="ListContainer" Orientation="Vertical" VerticalOptions="FillAndExpand">
+            </StackLayout>
+        </ScrollView>
+        
+        <Label FontSize="24" FontAttributes="Bold" Text="Add Tag:"
+               Grid.Row="3" Grid.Column="0"></Label>
+        <Entry x:Name="NewTagEntry" Placeholder="New Tag"
+               Grid.Row="3" Grid.Column="1"></Entry>
+        <Button x:Name="AddTagButton" Text="Add"
+                Grid.Row="3" Grid.Column="2"></Button>
 
-        <Button Text="Send" TextColor="AntiqueWhite" FontSize="16" 
-                BackgroundColor="CornflowerBlue" Grid.Row="3" Grid.Column="0"></Button>
+        <!--<Slider x:Name="ProbabilitySlider" Value="50"
+                Grid.Row="3" Grid.Column="0"></Slider>-->
+
+        <Button x:Name="TrainButton" Text="Train" TextColor="AntiqueWhite" FontSize="16" 
+                BackgroundColor="CornflowerBlue" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"></Button>
     </Grid>
 
 

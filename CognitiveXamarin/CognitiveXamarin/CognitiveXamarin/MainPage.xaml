@@ -30,7 +30,7 @@
 
         <Image x:Name="SelectedImage" BackgroundColor="DimGray" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></Image>
 
-        <Button x:Name="AnalysisButton" Text="Send" TextColor="AntiqueWhite" FontSize="16" 
+        <Button x:Name="AnalysisButton" Text="Analyze" TextColor="AntiqueWhite" FontSize="16" 
                 BackgroundColor="CornflowerBlue" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"></Button>
     </Grid>
 

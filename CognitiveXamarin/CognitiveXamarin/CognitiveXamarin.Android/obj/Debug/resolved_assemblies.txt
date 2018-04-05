@@ -4,6 +4,7 @@ C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\Java.Interop.dll
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\Mono.Android.dll
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\mscorlib.dll
+C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\Plugin.CurrentActivity.dll
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\Plugin.Media.Abstractions.dll
 C:\Users\Andrew.Kenny\Desktop\Research\testCV\CognitiveXamarin\CognitiveXamarin\CognitiveXamarin.Android\obj\Debug\android\assets\Plugin.Media.dll
