@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Newtonsoft.Json;
 using CognitiveXamarin.Objects;
 using CognitiveXamarin.Services;
 using Newtonsoft.Json.Linq;
@@ -23,15 +18,20 @@ namespace CognitiveXamarin
         public SummaryPage(ImageSource img, string filename, string analysisResults)
 		{
             InitializeComponent();
+            //add the events and triggers
 		    AddTagButton.Clicked += AddTagButton_OnClicked;
             TrainButton.Clicked += TrainButton_OnClicked;
-            //ProbabilitySlider.ValueChanged += FilterPrediction;
-
+            //set the img source to the img from previous page
             SelectedImage.Source = img;
+            //set the img path to the img from previous page
 		    currentImgPath = filename;
+            //parse the json results to an object.
             this.predictions = JObject.Parse(analysisResults).SelectToken("$.Predictions").ToObject<Prediction[]>();
 		    
             //TODO: Find a better way to do this? Is there a better way to repeat using xaml?
+            /*foreach prediction from the results, create a horizontal stack layout with a label for the tag,
+             a label for the prediction, and a toggle so that a user can select the tags that they want to 
+             train with.*/
             foreach (var prediction in predictions)
 		    {
 		        var sl = new StackLayout { Orientation = StackOrientation.Horizontal };
@@ -51,10 +51,9 @@ namespace CognitiveXamarin
 		        {
 		            HorizontalOptions = LayoutOptions.EndAndExpand
 		        };
-		        //toggle.Toggled += ToggleSwitched;
-
                 sl.Children.Add(toggle);
-                //ad togle to the switch dictionary
+
+                //also add toggle to the switch dictionary with the tag name so we know what the user selected.
                 switchDictionary.Add(toggle, prediction.Tag);
 
                 ListContainer.Children.Add(sl);
@@ -96,12 +95,14 @@ namespace CognitiveXamarin
 
 	    private async void TrainButton_OnClicked(object sender, EventArgs e)
 	    {
+            //if no path, then no image is selected. I don't know how you got here...
 	        if (currentImgPath == null)
 	        {
 	            await DisplayAlert("Please Select an Image:", "No image Selected", "OK");
 	            return;
 	        }
 
+            //TODO: There must be a better way to do this. Big lists of tags will be slow.
 	        List<string> tags = new List<string>();
 
             foreach (var set in switchDictionary)
@@ -111,27 +112,16 @@ namespace CognitiveXamarin
 	                tags.Add(set.Value);
 	            }
 	        }
-          
-	        var results = await CognitiveTrainingService.CognitiveTraining(currentImgPath, tags);
+            
+            //make a call to the training service
+	        var results = await CognitiveTrainingService.CognitiveTrainingRequest(currentImgPath, tags);
 
+            //Prompt the user with the results of the request.
 	        if (!string.IsNullOrEmpty(results))
 	        {
 	            await DisplayAlert("Results", results, "OK");
             }
         }
-
-	    //private static void ToggleSwitched(object sender, ToggledEventArgs e)
-	    //{
-     //       //if toogle is on...
-	    //    if (e.Value)
-	    //    {
-     //           //add the corresponding value to the tag to the list of tags
-     //       }
-	    //    else
-	    //    {
-     //           //remove the corresponding value from the list of tags.
-	    //    }
-	    //}
 
         //private async void FilterPrediction(object sender, EventArgs e)
         //{

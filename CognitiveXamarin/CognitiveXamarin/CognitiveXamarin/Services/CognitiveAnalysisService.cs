@@ -6,7 +6,6 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using CognitiveXamarin.Tools;
-using Xamarin.Forms;
 
 namespace CognitiveXamarin.Services
 {
@@ -30,7 +29,7 @@ namespace CognitiveXamarin.Services
         private const string uriBase = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.1/Prediction/768ccd4a-c898-4e0d-9864-0899df095b28/image?iterationId=00cf512e-eefb-482c-a520-835c132f8d21";
 
 
-        public static async Task<string> CognitiveRequest(string filepath)
+        public static async Task<string> CognitiveAnalysisRequest(string filepath)
         {
             // Execute the REST API call.
             return await MakeAnalysisRequest(filepath);          

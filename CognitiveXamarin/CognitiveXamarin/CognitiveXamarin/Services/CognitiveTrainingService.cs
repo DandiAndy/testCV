@@ -7,7 +7,6 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using CognitiveXamarin.Tools;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace CognitiveXamarin.Services
@@ -32,15 +31,16 @@ namespace CognitiveXamarin.Services
         private const string uriBase = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.2/Training/projects/768ccd4a-c898-4e0d-9864-0899df095b28/images/files";
 
 
-        public static async Task<string> CognitiveTraining(string filepath, List<string> tags)
+        public static async Task<string> CognitiveTrainingRequest(string filepath, List<string> tags)
         {
             // Execute the REST API call.
-            var request = CreateRequest(filepath, tags);
+            var request = CreateRequestJson(filepath, tags);
             return await MakeTrainingRequest(request);
         }
 
-        private static string CreateRequest(string filepath, List<string> tags)
+        private static string CreateRequestJson(string filepath, List<string> tags)
         {
+            //convert to usable json to send to the service
             JObject jRequest = new JObject(
                 new JProperty("Image",
                     new JArray(
